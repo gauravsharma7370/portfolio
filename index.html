@@ -1,103 +1,415 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Gaurav Sharma | WordPress Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #333;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin-top: 50px;
-      font-size: 26px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background: #e63946;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .btn.secondary {
-      background: #1d3557;
-    }
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/938fa0127e.js" crossorigin="anonymous"></script>
+    <title>Website Designer and Developer</title>
+    <style type="text/css">
+        * {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-primary {
+    color: #FD6E0A
+}
+
+.btn-primary {
+    background-color: #FD6E0A;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    padding: 18px 35px;
+}
+
+
+/* Header & Navigation Style */
+.header {
+    background: #FFF8F3;
+    background-image: url('../images/header_bg.png'), url('../images/developer.png');
+    background-repeat: no-repeat;
+    background-position: bottom right, left;
+}
+
+.nav-title {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    color: #181818;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+    padding: 50px 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+
+/* Banner Start */
+.banner {
+    margin: 0 200px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-subtitle {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 61px;
+    color: #181818;
+}
+
+.banner-title {
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 116px;
+    margin-bottom: 20px;
+    color: #181818;
+}
+
+.banner-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* Main Section Start */
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 130px;
+}
+
+/* About Section Start */
+.about {
+    background-color: #FFF8F3;
+    padding: 131px 157px;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    text-align: center;
+    color: #181818;
+    margin-bottom: 50px;
+}
+
+.section-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+.about-info-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #757575;
+    text-align: center;
+}
+
+.info-description {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #474747;
+    text-align: center;
+}
+
+/* What I Do Section */
+.skill-container {
+    display: flex;
+    gap: 24px;
+}
+
+.skill {
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+}
+
+.skill-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.skill-decription {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #757575;
+}
+
+
+/* Resume Section Style */
+.resume-content {
+    display: flex;
+    gap: 30px;
+}
+
+.resume-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+}
+
+.resume-item {
+    margin: 30px 0;
+}
+
+.resume .title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    color: #474747;
+}
+
+.resume .sub-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #757575;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.resume .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #757575;
+}
+
+.resume-btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* Contact Section Title */
+.contact {
+    display: flex;
+    gap: 100px;
+    background-color: #FFF8F3;
+    padding: 130px 200px;
+}
+.contact .section-title {
+    text-align: left;
+}
+
+.contact .section-description {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contact input[type="text"], input[type="email"], textarea {
+    margin-bottom: 24px;
+    border: none;
+    width: 100%;
+    padding: 18px 30px;
+}
+
+.contact input {
+    height: 64px;
+}
+
+.contact a {
+    text-decoration: none;
+}
+    </style>
 </head>
+
 <body>
+    <header class="header">
+        <nav>
+            <h2 class="nav-title">Gau<span class="text-primary">ra</span>v</h2>
+            <ul>
+                
+                <li> <a href="https://wa.me/918920137338?text=Hi%20I%20am%20interested%20in%20your%20services
+" class="btn-primary" style="text-decoration: none;">
+    Whatsapp Me
+</a></li>
+            </ul>
+        </nav>
+        <!-- Header Banner Start -->
+        <div class="banner">
+            <div class="col1">
+                <h3 class="banner-subtitle">Hi, I am</h3>
+                <h1 class="banner-title">Gaurav Sharma</h1>
+                <p class="banner-description">I help businesses grow online by creating clean, mobile-friendly  websites that are easy to manage and affordable.</p>
+                <button class="btn-primary"><i class="fa-solid fa-arrow-down-to-bracket"></i> Download CV</button>
+            </div>
+            <img src="img.png" alt="Robin's Photo">
+        </div>
+    </header>
+    <main>
+        <!-- About Section Start -->
+        <section class="about"> 
+            <h3 class="section-title">About Me</h3>
+            <p class="section-description">I am a designer and developer with a passion for web design. I enjoy creating simple, clean, and modern websites that provide real value to users. I help businesses establish a strong online presence by building high-quality websites that are secure, responsive, and easy to maintain. Client satisfaction and timely delivery are my top priorities.</p>
+            <div class="about-info-container">
+                <div class="about-info">
+                    <p class="info-title">Name:</p>
+                    <p class="info-description">Gaurav Sharma</p>
+                </div>
+                <div class="about-info">
+                    <p class="info-title">Email:</p>
+                    <p class="info-description">gauravsharma7370@gmail.com</p>
+                </div>
+                <div class="about-info">
+                    <p class="info-title">Date of birth:</p>
+                    <p class="info-description">04 April 1997</p>
+                </div>
+                <div class="about-info">
+                    <p class="info-title">From:</p>
+                    <p class="info-description">Delhi, INDIA (Working Worldwide)</p>
+                </div>  
+            </div>
+        </section>
 
-  <div class="container">
-    <h1>Hi, I'm Gaurav Sharma</h1>
-    <p>I build fast, responsive and professional WordPress websites for small businesses and startups.</p>
+        <!-- What I Do Section Start-->
+        <section class="what-i-do">
+            <h3 class="section-title">What I Do</h3>
+            <p class="section-description">I specialize in building modern, secure, and scalable websites using the latest web technologies. Below is an overview of the tools and platforms I use to deliver high-quality web solutions for businesses.</p>
+            <div class="skill-container">
+                <div class="skill">
+                    <img src="images/icons/js.png" alt="">
+                    <p class="skill-title">PHP & Database <span class="fa fa-code fa-spin"></span> </p>
+                    <p class="skill-decription">I develop dynamic and secure websites using PHP with MySQL databases. I focus on clean code, performance, and data security.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/react.png" alt="">
+                    <p class="skill-title">JavaScript & AJAX <i class="fab fa-js fa-spin"></i></p>
+                    <p class="skill-decription">I use JavaScript, AJAX, and jQuery to create interactive, fast, and user-friendly web experiences without page reloads..</p>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/nodejs.png" alt="">
+                    <p class="skill-title">WordPress Development <span class="fa fa-wordpress fa-spin"></span> </p>
+                    <p class="skill-decription">I build custom WordPress websites, themes, and plugins. I also work with Elementor, WooCommerce, and website optimization.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/icons/mongo.png" alt="">
+                    <p class="skill-title">Wix & Shopify <i class="fa fa-shopping-cart fa-spin"></i></p>
+                    <p class="skill-decription">I create professional business websites on Wix and fully functional eCommerce stores using Shopify with payment and product setup</p>
+                </div>
+            </div>
+        </section>
 
-    <a class="btn" href="mailto:yourmail@gmail.com">Email Me</a>
-    <a class="btn secondary" href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+        <!-- Resume Section Start -->
+        <section class="resume">
+            <h3 class="section-title">A summary of My Resume</h3>
+            <div class="resume-content">
+                <div>
+                    <h4 class="resume-title">My Education</h4>
+                    <div class="resume-item">
+                        <h4 class="title">Bachelor Degree in Computer Sceince</h4>
+                        <h5 class="sub-title">IGNOU University / 2015 - 2017</h5>
+                       
+                    </div>
+                    <hr>                  
+                    <div class="resume-item">
+                        <h4 class="title">Master Degree in Computer Sceince</h4>
+                        <h5 class="sub-title">Harvard University / 2018 - 2020</h5>
+                       
+                    </div>
+                    <hr>                  
+                    <div class="resume-item">
+                        <h4 class="title">PHP and Database Diploma</h4>
+                        <h5 class="sub-title">SSTech Infotech Noida, India</h5>
+                       
+                    </div>                
+                </div>
 
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>WordPress Website</h3>
-        <p>Business, portfolio & landing page websites.</p>
-      </div>
-      <div class="card">
-        <h3>WooCommerce Store</h3>
-        <p>Online store setup with payment & shipping.</p>
-      </div>
-      <div class="card">
-        <h3>Website Redesign</h3>
-        <p>Modern redesign for old or slow websites.</p>
-      </div>
-    </div>
+                <div>
+                    <h4 class="resume-title">My Experience</h4>
+                    <div class="resume-item">
+                        <h4 class="title">Internship</h4>
+                        <h5 class="sub-title">Creative Squadz</h5>
+                        
+                    </div>
+                    <hr>                  
+                    <div class="resume-item">
+                        <h4 class="title">3 years</h4>
+                        <h5 class="sub-title">Aziels Technologies </h5>
+                        <p class="description">PHP Developer (2021-2024)</p>
+                    </div>
+                    <hr>                  
+                    <div class="resume-item">
+                        <h4 class="title">Freelancing Work</h4>
+                        <h5 class="sub-title">PHP and Wordpress Developer</h5>
+                                            </div>                   
+                </div>
+            </div>
+            <div class="resume-btn">
+                <a href="https://wa.me/918920137338?text=Hi%20I%20am%20interested%20in%20your%20services
+" class="btn-primary" style="text-decoration: none;">
+    Whatsapp Me
+</a>
+                
+            </div>
+        </section>
 
-    <h2>Why Choose Me?</h2>
-    <p>
-      ✔ Clean & modern design<br>
-      ✔ Mobile responsive<br>
-      ✔ Fast delivery<br>
-      ✔ Affordable pricing
-    </p>
-
+        <!-- Contact Section Start -->
+        <section class="contact">
+            <div >
+                <h3 class="section-title">Lets Connect</h3>
+                <a href="" style="color: black!important"> <i class="fa fa-envelope" ></i> Email</a><br>
+                <a href="" style="color: black!important"> <i class="fa fa-instagram"></i> Instagram</a><br>
+                <a href="https://wa.me/918920137338?text=Hi%20I%20am%20interested%20in%20your%20services
+" style="color: black!important"> <i class="fa fa-whatsapp"></i> Whatsapp</a>
+                
+            </div>
+            
+        </section>
+    </main>
     <footer>
-      © 2026 Gaurav Sharma | WordPress Developer
-    </footer>
-  </div>
 
+    </footer>
 </body>
+
 </html>
