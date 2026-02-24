@@ -23,7 +23,7 @@
 }
 
 .btn-primary {
-    background-color: #FD6E0A;
+    
     border: none;
     border-radius: 5px;
     color: #ffffff;
@@ -31,6 +31,13 @@
     font-size: 20px;
     line-height: 27px;
     padding: 18px 35px;
+    transition: 0.3s ease;
+    background: linear-gradient(45deg, #ff6a00, #ff8500);
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
+    cursor: pointer;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
 }
 
 
@@ -43,10 +50,12 @@
 }
 
 .nav-title {
-    font-weight: 800;
+    
     font-size: 45px;
     line-height: 61px;
     color: #181818;
+    font-weight: 700;
+  letter-spacing: 1px;
 }
 
 nav {
@@ -94,6 +103,7 @@ nav li {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 30px;
+    margin: 20px 0px;
 }
 
 
@@ -286,6 +296,7 @@ section {
   .banner-title {
     font-size: 42px;
     line-height: 52px;
+    margin: 20px 0px;
   }
 
   .banner-subtitle {
@@ -339,48 +350,166 @@ section {
   background: #000;
 }
 
+/* .profile-img {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+ */
+ .profile-img:hover {
+   border-radius: 10px;
+  filter: drop-shadow(5px 5px 20px #f3d4bd);
+} 
+
+.profile-img {
+    border-radius: 16px;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.18));
+    margin-top: -20px;
+    float: left;
+}
+
+.Featured-project{
+text-align: center;
+padding: 100px 0px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+justify-content: space-around;
+gap: 10px;
+}
+
+.Featured-project-card:hover .Featured-project-card img{
+    transition: all 0.5s;
+    }
+.Featured-project-card img{
+    width: 100%;
+}
+.project-section h1{
+text-align: center;
+}
+
     </style>
+}
+}
 </head>
 
 <body>
     <header class="header">
         <nav>
-            <h2 class="nav-title">Gau<span class="text-primary">ra</span>v</h2>
+            <h2 class="nav-title">Gau<span style="color: #ff6a00;">ra</span>v</h2>
            
         </nav>
         <!-- Header Banner Start -->
-        <div class="banner">
+        <div class="banner"">
             <div class="col1">
                 <h3 class="banner-subtitle">Hi, I am</h3>
                 <h1 class="banner-title">Gaurav Sharma</h1>
-                <p class="banner-description">I help businesses grow online by creating clean, mobile-friendly  websites that are easy to manage and affordable.</p>
+                <span style="font-weight: bolder;">🟢 Available for Remote Projects</span>
+                <br>
+                <br>
+                <p class="banner-description" style="font-weight: bolder;">
+Custom WordPress & Backend Solutions for Agencies & Growing Businesses                </p>
+                <button class="btn-primary">View My Work</button>
+                <button class="btn-primary">Let's Discuss for your Project</button>
             </div>
-            <img src="img.png" alt="Robin's Photo">
+            <img src="photo.png" alt="Robin's Photo" height="500px" class="profile-img">
         </div>
+        <style>
+            .trust-bar {
+  background: linear-gradient(to right, #111, #222);
+  padding: 14px 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  display: flex;
+  width: auto;
+  height: auto;
+  color: white;
+  padding: 10px;
+  word-spacing: 1px;
+  margin-bottom: 0px;
+}
+
+.whatIcan{
+    padding: 20px;
+    background-color: #FFF8F3;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2;
+}
+ul li{list-style: none;}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 0px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+ background: linear-gradient(to right, #111, #222);
+color: white;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+        </style>
+        
+        <div class="trust-bar">
+            3+ Years Experience | 15+ Projects Completed | Available for Long-Term Collaboration</div>
     </header>
     <main>
+        <section>
+            <h2  class="services">What I Can Help With</h2>
+            <p>
+                <ul style="padding: 20px;text-align: center;word-spacing: 1px;letter-spacing: 1px;line-height: 2;">
+                    <li class="service-card">✔ Custom WordPress Theme Development</li>
+                      <li class="service-card">✔ Plugin Customization (PHP)</li>  
+                        <li class="service-card">✔ Speed Optimization (90+ Score ) </li>
+                         <li class="service-card">✔ WooCommerce Development</li>
+                         <li class="service-card">✔ Bug Fixing & Backend Support</li>
+                </ul>
+            </p>
+        </section>
+         <section class="project-section">
+
+<!-- featured project start -->
+                    <h1>Featured Projects</h1>
+
+            <div class="Featured-project">
+
+
+                <div class="Featured-project-card">
+                <img src="resturant.png">
+                <p><a href="">Demo Link</a></p>
+                </div>
+
+                <div class="Featured-project-card">
+                <img src="gym.png">
+                <p><a href="">Demo Link</a></p>
+                </div>
+
+               
+            </div>
+
+<!-- featurerd projcet end section -->
+        </section>
         <!-- About Section Start -->
         <section class="about"> 
             <h3 class="section-title">About Me</h3>
             <p class="section-description">I am a designer and developer with a passion for web design. I enjoy creating simple, clean, and modern websites that provide real value to users. I help businesses establish a strong online presence by building high-quality websites that are secure, responsive, and easy to maintain. Client satisfaction and timely delivery are my top priorities.</p>
-            <div class="about-info-container">
-                <div class="about-info">
-                    <p class="info-title">Name:</p>
-                    <p class="info-description">Gaurav Sharma</p>
-                </div>
-                <div class="about-info">
-                    <p class="info-title">Email:</p>
-                    <p class="info-description">gauravsharma7370@gmail.com</p>
-                </div>
-                <div class="about-info">
-                    <p class="info-title">Date of birth:</p>
-                    <p class="info-description">04 April 1997</p>
-                </div>
-                <div class="about-info">
-                    <p class="info-title">From:</p>
-                    <p class="info-description">Delhi, INDIA (Working Worldwide)</p>
-                </div>  
-            </div>
+          
         </section>
 
         <!-- What I Do Section Start-->
@@ -410,60 +539,10 @@ section {
                 </div>
             </div>
         </section>
+       
 
         <!-- Resume Section Start -->
-        <section class="resume">
-            <h3 class="section-title">A summary of My Resume</h3>
-            <div class="resume-content">
-                <div>
-                    <h4 class="resume-title">My Education</h4>
-                    <div class="resume-item">
-                        <h4 class="title">Bachelor Degree in Computer Sceince</h4>
-                        <h5 class="sub-title">IGNOU University / 2015 - 2017</h5>
-                       
-                    </div>
-                    <hr>                  
-                    <div class="resume-item">
-                        <h4 class="title">Master Degree in Computer Sceince</h4>
-                        <h5 class="sub-title">IGNOU University / 2018 - 2018</h5>
-                       
-                    </div>
-                    <hr>                  
-                    <div class="resume-item">
-                        <h4 class="title">PHP and Database Diploma</h4>
-                        <h5 class="sub-title">SSTech Infotech Noida, India</h5>
-                       
-                    </div>                
-                </div>
-
-                <div>
-                    <h4 class="resume-title">My Experience</h4>
-                    <div class="resume-item">
-                        <h4 class="title">Internship</h4>
-                        <h5 class="sub-title">Creative Squadz</h5>
-                        
-                    </div>
-                    <hr>                  
-                    <div class="resume-item">
-                        <h4 class="title">3 years</h4>
-                        <h5 class="sub-title">Aziels Technologies </h5>
-                        <p class="description">PHP Developer (2021-2024)</p>
-                    </div>
-                    <hr>                  
-                    <div class="resume-item">
-                        <h4 class="title">Freelancing Work</h4>
-                        <h5 class="sub-title">PHP and Wordpress Developer</h5>
-                                            </div>                   
-                </div>
-            </div>
-            <div class="resume-btn">
-                <a href="https://wa.me/918920137338?text=Hi%20I%20am%20interested%20in%20your%20services
-" class="btn-primary" style="text-decoration: none;">
-    Whatsapp Me
-</a>
-                
-            </div>
-        </section>
+       
 
         <!-- Contact Section Start -->
         <section class="contact">
